@@ -5,6 +5,6 @@ export PATH="$PATH:$HOME/.cargo/bin"
 cargo install
 cargo install wasm-pack
 wasm-pack build --target no-modules
-mkdir www/pkg
-cp pkg/website.js www/pkg
-cp pkg/website_bg.wasm www/pkg
+mkdir frontends/web/pkg
+cp pkg/website.js frontends/web/pkg
+cp pkg/website_bg.wasm frontends/web/pkg
