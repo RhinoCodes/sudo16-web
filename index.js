@@ -79,7 +79,6 @@ document.getElementById("results").addEventListener("keyup", function (event) {
   } else if (event.key != "Shift") {
     vm.set_byte(0xFF, event.key.charCodeAt(0));
   }
-  console.log(event)
 })
 
 function update_mem(vm_mem) {
@@ -96,11 +95,8 @@ async function run_wasm() {
   // Load the wasm file by awaiting the Promise returned by `wasm_bindgen`
   // `wasm_bindgen` was imported in `index.html`
   await wasm_bindgen();
-
-  console.log('index.js loaded');
-
+  
   code = document.getElementById("code").children[1].value.split(" ");
-  console.log(code)
   if (localStorage.getItem("code") != document.getElementById("code").children[1].value && document.getElementById("code").children[1].value != urlParams.get("code")) {
     localStorage.setItem("code", document.getElementById("code").children[1].value)
   }

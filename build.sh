@@ -6,5 +6,5 @@ cargo install
 cargo install wasm-pack
 wasm-pack build --target no-modules
 mkdir frontends/web/pkg
-cp pkg/website.js frontends/web/pkg
-cp pkg/website_bg.wasm frontends/web/pkg
+cp pkg/sudo16.js frontends/web/pkg
+cp pkg/sudo16_bg.wasm frontends/web/pkg
