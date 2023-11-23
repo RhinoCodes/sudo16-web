@@ -95,9 +95,9 @@ async function run_wasm() {
   // Load the wasm file by awaiting the Promise returned by `wasm_bindgen`
   // `wasm_bindgen` was imported in `index.html`
   await wasm_bindgen();
-  
+
   code = document.getElementById("code").children[1].value.split(" ");
-  if (localStorage.getItem("code") != document.getElementById("code").children[1].value && document.getElementById("code").children[1].value != urlParams.get("code")) {
+  if (localStorage.getItem("code") != document.getElementById("code").children[1] && document.getElementById("code").children[1].value.replaceAll(" ", ",") != urlParams.get("code")) {
     localStorage.setItem("code", document.getElementById("code").children[1].value)
   }
   vm = VirtualMachine.new(code);
