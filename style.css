@@ -4,9 +4,11 @@ html {
     background-color: #2E3440;
   }
   
+  
+
   #memory, #output, #registers, #code > .details, #code, textarea {
     padding: 1em;
-    width: 25%;
+    width: 25vw;
     color: #eceff4;
     background: #292F3A;
     font-family: 'Source Code Pro', monospace;
@@ -29,7 +31,7 @@ html {
   }
 
   #registers {
-    width: 10% !important;
+    width: 10vw !important;
   }
 
   .title {
@@ -75,6 +77,7 @@ html {
   
   #all {
     display: flex;
+    width: fit-content;
   }
 
   button, input {
@@ -204,4 +207,12 @@ p {
   #guides {
     margin-top: 1em;
   }
+}
+
+.embed {
+  width: 40vw !important;
+}
+
+.embedr {
+  width:  20vw !important;
 }

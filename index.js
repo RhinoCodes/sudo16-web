@@ -19,6 +19,8 @@ if (code) {
   document.getElementById("code").children[1].value = code.replaceAll(",", " ");
 }
 
+
+
 function updatemobile() {
   if (window.innerWidth <= 700) {
     document.body.appendChild(document.getElementById("guides"))
@@ -224,3 +226,14 @@ function step() {
 }
 
 run_wasm();
+if (urlParams.get("embed") != undefined) {
+  console.log("hide")
+  document.getElementById("code").style.display = "none";
+  document.getElementById("guides").style.display = "none";
+  document.getElementById("share").style.display = "none";
+  document.getElementsByTagName("h1")[0].style.display = "none";
+  document.getElementById("memory").style.width = "40vw"
+  document.getElementById("output").style.width = "40vw"
+  document.getElementById("registers").style.width = "20vw"
+  runhz();
+}
