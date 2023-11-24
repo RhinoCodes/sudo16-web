@@ -227,14 +227,30 @@ function step() {
 
 run_wasm();
 if (urlParams.get("embed") != undefined) {
-  document.domain = "sudos.site"
   document.getElementById("code").style.display = "none";
   document.getElementById("guides").style.display = "none";
   document.getElementById("share").style.display = "none";
+  
+  if (document.body.clientWidth < 600) {
+    document.getElementById("buttons").style.display = "none";
+    document.getElementById("memory").style.display = "none";
+    document.getElementById("registers").style.display = "none";
+    document.getElementById("lastInstruction").style.display = "none";
+    document.getElementById("results").classList.add("maxheight")
+    document.getElementById("output").classList.add("maxheight")
+    document.getElementById("all").classList.add("maxheight")
+    document.body.classList.add("maxheight")
+  }
   document.getElementsByTagName("h1")[0].style.display = "none";
   document.getElementById("memory").style.width = "40vw"
   document.getElementById("output").style.width = "40vw"
   document.getElementById("registers").style.width = "20vw"
-  
+
+
+  document.documentElement.style.background = 'transparent';
+  setTimeout(() => {
+    window.parent.postMessage(document.body.scrollHeight, '*');
+  },200)
   runhz();
+  
 }

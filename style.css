@@ -195,9 +195,10 @@ p {
 
   #all {
     flex-direction: column;
+    width:100%;
   }
   #memory, #output, #registers, #code > .details, #code, textarea {
-    width: 90% !important;
+    width: calc(100% - 2em) !important;
     margin-top: 1em;
   }
 
@@ -216,4 +217,12 @@ p {
 
 .embedr {
   width:  20vw !important;
+}
+
+.maxheight {
+  height: 100%;
+}
+body.maxheight {
+  margin: 0;
+  padding: 0;
 }
