@@ -171,6 +171,7 @@ html {
     box-shadow: none;
 
     resize: none;
+    height: calc(100% - 8em);
 }
 
 a {

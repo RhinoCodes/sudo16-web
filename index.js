@@ -227,7 +227,7 @@ function step() {
 
 run_wasm();
 if (urlParams.get("embed") != undefined) {
-  console.log("hide")
+  document.domain = "sudos.site"
   document.getElementById("code").style.display = "none";
   document.getElementById("guides").style.display = "none";
   document.getElementById("share").style.display = "none";
@@ -235,5 +235,6 @@ if (urlParams.get("embed") != undefined) {
   document.getElementById("memory").style.width = "40vw"
   document.getElementById("output").style.width = "40vw"
   document.getElementById("registers").style.width = "20vw"
+  
   runhz();
 }
